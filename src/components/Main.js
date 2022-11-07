@@ -1,5 +1,4 @@
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
 import NavPage from "./NavPage";
 import '../assets/main.css'
 
@@ -8,15 +7,9 @@ function Main() {
         <section >
             <div className="name">
                 <Navbar />
-
-                <div className="main-page container">
-                    <Sidebar />
-                    <NavPage />
-                </div>
-
+                <NavPage />
             </div>
-        </section>
-
+        </section >
     )
 }
 

@@ -1,5 +1,10 @@
 @import url("../index.css");
 
+.header-container {
+  margin-top: 48px;
+  padding-bottom: 16px;
+}
+
 h1 {
   color: var(--pry-color);
   margin-bottom: 16px;
@@ -9,9 +14,9 @@ h1 {
 }
 
 .details-holder {
-  border: 1px solid var(--border-color);
+  background-color: var(--sec-color);
   padding: 12px;
-  margin-bottom: 40px;
+  margin: 32px 0 80px;
   width: auto;
   max-width: 536px;
   font-weight: bold;
@@ -46,7 +51,9 @@ h1 {
 
 p {
   color: var(--text-color-two);
+  font-weight: normal;
 }
+
 
 .about {
     margin-top: 24px;

@@ -6,7 +6,7 @@ function Profile() {
     const url = "https://api.github.com/users/randoski"
     const { loading, data } = useFetch(url)
     return (
-        <div className="profile">
+        <div className="header-container container">
             <h1 className="heading">Personal details</h1>
 
             {/* Image and Names */}
@@ -26,7 +26,7 @@ function Profile() {
             </div>
 
             {/* Bio */}
-            <h1 className="heading">Bio</h1>
+            <h1 className="heading">My bio</h1>
             <div className="details-holder">
                 <p>{data.bio}</p>
             </div>

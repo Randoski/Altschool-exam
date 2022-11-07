@@ -2,8 +2,8 @@ import Repos from './Repos';
 
 function Repositories () {
     return (
-        <div>
-            <h1>Repositories</h1>
+        <div  className='header-container container'>
+            <h1>My repositories</h1>
             <Repos />
 
         </div>

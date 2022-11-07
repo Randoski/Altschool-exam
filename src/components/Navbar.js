@@ -1,7 +1,8 @@
 // import User from "../pages/User";
 import useFetch from "./useFetch";
-import '../assets/navbar.css'
-import { Link } from 'react-router-dom';
+import '../assets/navbar.css';
+import { NavbarData } from "./NavbarData";
+
 
 
 function Navbar() {
@@ -10,13 +11,25 @@ function Navbar() {
     return (
         <header className="container">
             <div className="navbar-container">
-                <h1 className="logo">Project 1</h1>
 
-                {/* Image & Names */}
-                <div className="img-and-name">
-                    <Link to="/random" className="link">404 page</Link>
-                    <p className="name">{data.name}</p>
-                    <img src={data.avatar_url} alt="Github dp" />
+                {/* <h1 className="logo">Project 1</h1> */}
+                <p className="name">{data.name}</p>
+
+                <div>
+                    <ul className="right-section">
+                        {NavbarData.map((val, key) => {
+                            return (
+
+                                <li key={key}
+                                    id={window.location.pathname === val.link ? "active" : ""}
+                                    onClick={() => {
+                                        window.location.pathname = val.link;
+                                    }} >
+                                    <div href={val.link}>{val.title}</div>
+                                </li>
+                            )
+                        })}
+                    </ul>
                 </div>
             </div>
         </header>

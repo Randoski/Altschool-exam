@@ -12,7 +12,7 @@ export default function Repos() {
   const [repos, setRepos] = useState([]);
   const [page, setPage] = useState()
 
-  const total = 6
+  const total = 3;
   const url = `https://api.github.com/users/randoski/repos?page=${page}&per_page=5`
   const { _, data } = useFetch(url)
 
@@ -20,6 +20,7 @@ export default function Repos() {
   return <>
 
     <main>
+      <div className="repo-list">
       {data && data.map(details =>
         <li key={details.id} className="details-holder">
           <p className='heading-2'>{details.name}</p>
@@ -34,6 +35,7 @@ export default function Repos() {
               <Link to="singlerepo" target= "" state={{ details: details }} style={{height: "100%" }} className='cta'>View Repo</Link>
         </li>
       )}
+      </div>
 
       {/* Pagination */}
       <div className='buttons'>
@@ -43,7 +45,7 @@ export default function Repos() {
           <Button variant="info" onClick={() => setPage(doc)} key={doc}>{doc}</Button>
         )}
         
-        <Button disabled={page >= 6} onClick={() => setPage(prev => prev + 1)}>Next</Button>
+        <Button disabled={page >= 3} onClick={() => setPage(prev => prev + 1)}>Next</Button>
       </div>
 
 

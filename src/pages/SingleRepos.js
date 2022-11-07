@@ -10,8 +10,8 @@ export default function Repo() {
   const { details } = myRepos.state;
   console.log(details);
   return (
-    <>
-      <article className="details-holder">
+    <div className="container">
+      <div className="details-holder">
         <div className="extra">
           <img src={details.owner.avatar_url} alt={details.owner.login} className="user-img" />
           <ul>
@@ -50,7 +50,7 @@ export default function Repo() {
               ))}
           </ul>
         </div>
-      </article>
-    </>
+      </div>
+    </div>
   );
 }
